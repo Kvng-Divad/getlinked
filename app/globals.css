@@ -1,0 +1,349 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}*/
+
+@layer utilities {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply box-border m-0 p-0;
+    background: #150E28;
+    color: #fff;
+    font-family: 'montserrat', 'sans-serif';
+  }
+  .bg-body{
+    background-color: #150E28;
+  }
+  .bg-footer{
+    background: #100B20;
+  }
+  .bg-nav{
+    background-color: #150E28,
+  }
+  .hero-m{
+    margin-top: 5.35rem;
+  }
+  .header-text{
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    font-style: italic;
+  }
+ 
+  @media screen and (min-width: 1536px ){ 
+    .header-text{
+      font-size: 36px;
+      
+    }
+}
+  .bg-button{
+    background: linear-gradient(270deg, #903AFF 0%, #FE34B9 100%);
+  }
+  .bd-bottom{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .bd-bottom2{
+    border-bottom: 1px solid #D434FE;
+  }
+  .bd-bottom3{
+    border-bottom: 4px solid #D434FE;
+  }
+  .bd-all{
+    border-radius: 5px;
+    border: 1px solid #D434FE;
+    background: rgba(255, 255, 255, 0.01);
+  }
+
+  .line::before{
+    content: '';
+    display: block;
+    height: 80%;
+    width:4px;
+    background-color: #D434FE;
+  }
+  .line2::before{
+    content: '';
+    display: block;
+    height: 100%;
+    width:4px;
+    background-color: #D434FE;
+  }
+  /*.partner_card{
+    flex: 1;
+    margin: 2rem;
+  }
+  .partner_card2{
+    flex: 1;
+    margin: 2rem 0 2rem 2rem;
+  }
+  .partner_card::before{
+    content: "";
+    display: block;
+    height:100%;
+    width:4px;
+    background: #D434FE;
+    position: absolute;
+    top:0;
+    right: -2rem;
+  }
+  .partner_card::after{
+    content: "";
+    display: block;
+    height:4px;
+    width:100%;
+    background: #D434FE;
+    position: absolute;
+    bottom: -1.5rem;
+  }
+  .partner_card2::after{
+    content: "";
+    display: block;
+    height:4px;
+    width:100%;
+    background: #D434FE;
+    position: absolute;
+    bottom: -1.5rem;
+  }*/
+
+  .onScroll{
+    transition: .1s ease-in all;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-height: 15vh;
+    z-index: 100;
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  }
+ 
+
+  .hero-text {
+    @apply font-hero font-extrabold;
+  }
+
+  .h1-light,
+  .h1-regular,
+  .h1-medium,
+  .h1-semiBold,
+  .h1-bold {
+    @apply text-h1;
+  }
+
+  .h2-light,
+  .h2-regular,
+  .h2-meduim,
+  .h2-semiBold,
+  .h2-bold {
+    @apply text-h2;
+  }
+
+  .h3-light,
+  .h3-regular,
+  .h3-meduim,
+  .h3-semiBold,
+  .h3-bold {
+    @apply text-h3;
+  }
+
+  .h4-light,
+  .h4-regular,
+  .h4-meduim,
+  .h4-semiBold,
+  .h4-bold {
+    @apply text-h4;
+  }
+
+  .h5-light,
+  .h5-regular,
+  .h5-meduim,
+  .h5-semiBold,
+  .h5-bold {
+    @apply text-h5;
+  }
+
+  .h6-light,
+  .h6-regular,
+  .h6-meduim,
+  .h6-semiBold,
+  .h6-bold {
+    @apply text-h6;
+  }
+
+  .h7-light,
+  .h7-regular,
+  .h7-meduim,
+  .h7-semiBold,
+  .h7-bold {
+    @apply text-h7;
+  }
+
+  .p1-light,
+  .p1-regular,
+  .p1-meduim,
+  .p1-semiBold,
+  .p1-bold {
+    @apply text-p1;
+  }
+
+  .p2-light,
+  .p2-regular,
+  .p2-meduim,
+  .p2-semiBold,
+  .p2-bold {
+    @apply text-p2;
+  }
+
+  .p3-light,
+  .p3-regular,
+  .p3-meduim,
+  .p3-semiBold,
+  .p3-bold {
+    @apply text-p3;
+  }
+
+  .p4-light,
+  .p4-regular,
+  .p4-meduim,
+  .p4-semiBold,
+  .p4-bold {
+    @apply text-p4;
+  }
+
+  .p5-light,
+  .p5-regular,
+  .p5-meduim,
+  .p5-semiBold,
+  .p5-bold {
+    @apply text-p5;
+  }
+
+  .p6-light,
+  .p6-regular,
+  .p6-meduim,
+  .p6-semiBold,
+  .p6-bold {
+    @apply text-p6;
+  }
+
+  .p7-light,
+  .p7-regular,
+  .p7-meduim,
+  .p7-semiBold,
+  .p7-bold {
+    @apply text-p7;
+  }
+
+  .h1-light,
+  .h2-light,
+  .h3-light,
+  .h4-light,
+  .h5-light,
+  .h6-light,
+  .h7-light,
+  .p1-light,
+  .p2-light,
+  .p3-light,
+  .p4-light,
+  .p5-light,
+  .p6-light,
+  .p7-light {
+    @apply font-light;
+  }
+
+  .h1-regular,
+  .h2-regular,
+  .h3-regular,
+  .h4-regular,
+  .h5-regular,
+  .h6-regular,
+  .h7-regular,
+  .p1-regular,
+  .p2-regular,
+  .p3-regular,
+  .p4-regular,
+  .p5-regular,
+  .p6-regular,
+  .p7-regular {
+    @apply font-normal;
+  }
+
+  .h1-medium,
+  .h2-meduim,
+  .h3-meduim,
+  .h4-meduim,
+  .h5-meduim,
+  .h6-meduim,
+  .h7-meduim,
+  .p1-meduim,
+  .p2-meduim,
+  .p3-meduim,
+  .p4-meduim,
+  .p5-meduim,
+  .p6-meduim,
+  .p7-meduim {
+    @apply font-medium;
+  }
+
+  .h1-semiBold,
+  .h2-semiBold,
+  .h3-semiBold,
+  .h4-semiBold,
+  .h5-semiBold,
+  .h6-semiBold,
+  .h7-semiBold,
+  .p1-bold,
+  .p2-bold,
+  .p3-bold,
+  .p4-bold,
+  .p5-bold,
+  .p6-bold,
+  .p7-bold {
+    @apply font-bold;
+  }
+
+  .p1-semiBold,
+  .p2-semiBold,
+  .p3-semiBold,
+  .p4-semiBold,
+  .p5-semiBold,
+  .p6-semiBold,
+  .p7-semiBold {
+    @apply font-semibold;
+  }
+
+  .h1-bold,
+  .h2-bold,
+  .h3-bold,
+  .h4-bold,
+  .h5-bold,
+  .h6-bold,
+  .h7-bold {
+    @apply font-extrabold;
+  }
+}
