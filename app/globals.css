@@ -29,6 +29,7 @@ body {
 @layer utilities {
   html {
     @apply scroll-smooth;
+    transition: 3s ease-in all;
   }
   body {
     @apply box-border m-0 p-0;
@@ -54,7 +55,17 @@ body {
     text-align: center;
     font-style: italic;
   }
+
+  .footer{
+    grid-template-columns: 100%;
+    align-items: flex-start;
+  }
  
+  @media screen and (min-width: 1024px ){ 
+    .footer{
+      grid-template-columns: 50% 50%;
+    }
+}
   @media screen and (min-width: 1536px ){ 
     .header-text{
       font-size: 36px;
@@ -94,42 +105,6 @@ body {
     width:4px;
     background-color: #D434FE;
   }
-  /*.partner_card{
-    flex: 1;
-    margin: 2rem;
-  }
-  .partner_card2{
-    flex: 1;
-    margin: 2rem 0 2rem 2rem;
-  }
-  .partner_card::before{
-    content: "";
-    display: block;
-    height:100%;
-    width:4px;
-    background: #D434FE;
-    position: absolute;
-    top:0;
-    right: -2rem;
-  }
-  .partner_card::after{
-    content: "";
-    display: block;
-    height:4px;
-    width:100%;
-    background: #D434FE;
-    position: absolute;
-    bottom: -1.5rem;
-  }
-  .partner_card2::after{
-    content: "";
-    display: block;
-    height:4px;
-    width:100%;
-    background: #D434FE;
-    position: absolute;
-    bottom: -1.5rem;
-  }*/
 
   .onScroll{
     transition: .1s ease-in all;

@@ -3,8 +3,8 @@ import idea from '@/app/assets/home/images/idea.svg'
 
 export default function Intro() {
   return (
-    <div className='bd-bottom'>
-        <div className='flex flex-col lg:flex-row gap-8 justify-between items-center py-16 px-4 max-w-5xl m-auto'>
+    <div className='bd-bottom' id='overview'>
+        <div className='flex flex-col lg:flex-row gap-8 justify-between items-center py-12 lg:py-36 px-4 max-w-5xl m-auto'>
             <div className='flex-1 flex justify-center items-center w-full h-full'>
                 <Image src={idea} alt='image'/>
             </div>

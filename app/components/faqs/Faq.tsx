@@ -24,7 +24,7 @@ export default function Faq() {
         },
     ]
   return (
-    <div className='bd-bottom'>
+    <div className='bd-bottom' id='faqs'>
         <div className='flex flex-col lg:flex-row gap-8 justify-between items-center px-4 py-16 max-w-5xl m-auto'>
             <div className='flex-1 flex flex-col justify-center lg:items-start w-full h-full'>
                 <div className='flex flex-col'>
